@@ -11,15 +11,13 @@ import java.util.Random;
 public class RandomAdapter implements AlvoAleatorios {
     @Override
     public double randomDouble() {
-        Random random = new Random();
-        return random.nextDouble();
+        return new Random().nextDouble();
     }
 
     @Override
     public double randomSeed(long seed) {
         System.out.println("Random nextDouble(seed)");
-        Random random = new Random(seed);
-        return random.nextDouble();
+        return new Random(seed).nextDouble();
     }
 
     @Override
